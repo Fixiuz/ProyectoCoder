@@ -1,0 +1,21 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static%}
+
+{% block contenidoQueCambia %}
+    
+    {% if cursos %}
+        <p>Estamos buscando el : {{camada}}</p>   
+        <ul>
+            {% for cur in cursos %}
+                <li>{{cur.nombre}}</li>
+                <li>{{cur.camada}}</li>
+            {% endfor %} 
+        </ul>
+    {% else %}
+    
+    {% endif %}
+
+    <p style="color: red;"> {{respuesta}}</p>
+        
+{% endblock %}  
